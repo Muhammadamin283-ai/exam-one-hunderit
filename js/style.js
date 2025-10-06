@@ -23,21 +23,23 @@ backToTop.addEventListener("click", () => {
 });
 
 // ACCORDION
+// ACCORDION
 const accordionItems = document.querySelectorAll(".accordion-item");
+
 accordionItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const content = item.querySelector(".accordion-content");
-    const icon = item.querySelector("svg");
+  const header = item.querySelector("div.flex");
+  const content = item.querySelector(".accordion-content");
+  const icon = item.querySelector("svg");
+
+  header.addEventListener("click", () => {
+    content.classList.toggle("hidden");
     if (content.classList.contains("hidden")) {
-      content.classList.remove("hidden");
-      icon.style.transform = "rotate(180deg)";
-    } else {
-      content.classList.add("hidden");
       icon.style.transform = "rotate(0deg)";
+    } else {
+      icon.style.transform = "rotate(180deg)";
     }
   });
 });
-
 // ADD TO CART FUNCTIONALITY
 let cart = [];
 const cartModal = document.getElementById("cartModal");
