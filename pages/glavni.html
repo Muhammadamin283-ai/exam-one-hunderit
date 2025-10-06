@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manhattan Club and Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              "manhattan-bg": "#1a0d05",
+              "manhattan-accent": "#e67e22",
+              "manhattan-dark": "#2d1a0f",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-manhattan-bg text-white">
+    <header class="py-4 px-6 md:px-12 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img
+          src="../images/2cd43ac7d2389ed9bea6693acd96d30980d6d676.png"
+          alt="Logo"
+          class="w-[150px] h-[40px]"
+        />
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="../index.html" class="nav-link text-sm uppercase font-medium"
+          >HOME</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+      <button
+        class="hidden md:block bg-transparent border border-manhattan-accent text-manhattan-accent px-6 py-2 rounded font-bold hover:bg-manhattan-accent hover:text-white"
+      >
+        БРОНИРОВАНИЕ
+      </button>
+
+      <!-- Hamburger Menu Button -->
+      <button
+        id="hamburger"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 bg-manhattan-dark rounded"
+      >
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </header>
+
+    <div id="mobileMenu" class="md:hidden bg-manhattan-dark p-6 hidden">
+      <nav class="flex flex-col space-y-4">
+        <a href="#" class="nav-link text-sm uppercase font-medium">Главная</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+    </div>
+
+    <section class="relative py-12 px-6 md:px-12 mt-10">
+      <div class="flex flex-col md:flex-row gap-8">
+        <div class="md:w-2/3 relative">
+          <img
+            src="../images/038ff6f7774b4e230b0731eb1cff8a45aa7b9524.png"
+            alt="Hero Image"
+            class="w-full h-full rounded-lg"
+          />
+          <div class="">
+            <div
+              class="absolute top-6 left-6 bg-white text-black px-4 py-2 rounded"
+            >
+              SINCE 1996
+            </div>
+          </div>
+          <div
+            class="absolute bottom-6 left-6 text-white text-3xl md:text-4xl font-bold mb-10"
+          >
+            TRUE. FONTANKA.<br />UNDERGROUND.
+          </div>
+        </div>
+        <div class="w-full md:w-2/5 flex flex-col gap-4">
+          <!-- Sarlavhalar: БЛИЖАЙШИЕ va СКОРО -->
+          <div class="flex gap-4 mb-4">
+            <div
+              class="flex-1 bg-[#2d1a10] p-3 rounded-t-lg text-center font-semibold text-sm md:text-base"
+            >
+              БЛИЖАЙШИЕ
+            </div>
+            <div
+              class="flex-1 bg-[#2d1a10] p-3 rounded-t-lg text-center font-semibold text-sm md:text-base"
+            >
+              СКОРО
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <!-- 1-voqea -->
+            <div class="bg-[#2d1a10] p-1 rounded-lg border border-orange-400">
+              <div class="text-xs md:text-sm font-bold"></div>
+              <img
+                src="../images/808570bb98f771656661b1b7d1f6da588d1de402.jpg"
+                alt="Event 1"
+                class="w-full h-full"
+              />
+            </div>
+
+            <!-- 2-voqea -->
+            <div class="bg-[#2d1a10] p-2 rounded-lg border border-orange-500">
+              <div class="text-xs md:text-sm font-bold mb-1">...</div>
+              <img
+                src="../images/f8cd3025e84aa3bd7330702d035f3591b9adfe40.jpg"
+                alt="Event 2"
+                class="w-full h-auto rounded"
+              />
+            </div>
+
+            <!-- 3-voqea -->
+            <div class="bg-[#2d1a10] p-1 rounded-lg border border-orange-500">
+              <div class="text-xs md:text-sm font-bold"></div>
+              <img
+                src="../images/f872ddf89ba7e05313a6169f020424f6a763f768.jpg"
+                alt="Event 3"
+                class="w-100 h-full"
+              />
+            </div>
+
+            <!-- 4-voqea -->
+            <div class="bg-[#2d1a10] py-1 rounded-lg border border-orange-500">
+              <div class="text-xs md:text-sm font-bold mb-1"></div>
+              <img
+                src="../images/911298623892a6c2bf69eba6cc6dad0cc0ce0da5.jpg"
+                alt="Event 4"
+                class="w-50 h-50"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 px-6 md:px-12">
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-4 py-2 rounded text-sm font-bold mb-12"
+        >
+          TOP “MANHATTAN” MENU
+        </div>
+        <h2 class="text-3xl font-bold">КУХНЯ</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Menu Item 1 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/6d769d1536bd89900daf1d31e299baba4eb26aa0.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">200 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 2 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/b25a37fe480613158b61d883ba9ced49a286eec4.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">500 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 3 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/ed63aee55f3c5badf56fd663f1fb0f2676cf61ed.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">400 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 4 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/5e1b67dce4c1918fde6ffcb619ba3c5d5d5a5ea3.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">200 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 5 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/a79c68eb2ef201b2b79a1e37ca780eabe9aa5bb6.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">300 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 6 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/7daa6ed26ffb165e236168a79163b364a7d205b2.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">500 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 7 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/cc3f2a7a9b8e324e3d57e5cb79be624f95ae0ee5.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">100 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+        <!-- Menu Item 8 -->
+        <div
+          class="flex items-center gap-4 group cursor-pointer menu-item"
+          data-name="AMET DONEC."
+          data-price="550"
+        >
+          <img
+            src="../images/dbae966165e940fcfef374c3c3e6db19c32ffc99.jpg"
+            alt="Dish"
+            class="w-[120px] h-[100px] rounded transition-transform duration-300 group-hover:scale-105"
+          />
+          <div class="flex-1">
+            <h3 class="font-bold group-hover:text-manhattan-accent transition">
+              AMET DONEC.
+            </h3>
+            <p class="text-xs text-manhattan-accent">300 rp</p>
+            <p
+              class="text-xs mt-1 opacity-70 group-hover:opacity-100 transition"
+            >
+              Placerat id auctor nunc id vel vel curabitur. <br />
+              Urna fames maecenas leo elit diam nibh elit.
+            </p>
+          </div>
+          <div
+            class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent px-3 py-1 rounded font-bold text-sm group-hover:bg-manhattan-accent group-hover:text-manhattan-bg transition add-to-cart"
+          >
+            550 ₽
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <button
+          class="bg-manhattan-accent text-manhattan-bg px-8 py-3 rounded font-bold hover:bg-opacity-90 transition"
+        >
+          ВСЕ МЕНЮ
+        </button>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="flex flex-col md:flex-row gap-6 p-4 md:p-8 bg-[#1a0d05] text-white"
+      >
+        <!-- Chap tomondagi БАНКЕТЫ bloki -->
+        <div class="w-full md:w-1/3 flex flex-col justify-center">
+          <div
+            class="bg-white text-black px-4 py-2 rounded-md font-semibold text-xs md:text-sm mb-4 self-start"
+          >
+            TOP "MANHATTAN" EVENTS
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">БАНКЕТЫ</h2>
+          <p class="text-sm md:text-base mb-4">
+            Quam massa pretium et venenatis. Fringilla sagittis, arcu massa, in
+            sem viverra consequat. Tempus sed est interdum eget nisi, nec fames.
+            Eget amet hac varius aliquam. Mattis egestas suspendisse convallis
+            eu arcu et aliquet.
+          </p>
+          <p class="text-sm md:text-base mb-4">
+            Porttitor risus sociis vitae nunc id lacus eget felis. Viverra et
+            purus nibh ut. Sed ac leo sit posuere vulputate sed morbi. Donec
+            gravida at turpis sed pulvinar. A nibh non consectetur morbi in
+            arcu, in pellentesque mauris.
+          </p>
+          <p class="text-sm md:text-base mb-6">
+            Eu sodales netus faucibus interdum interdum platea massa egestas.
+            Facilisis donec gravida pretium diam semper at id eleifend.
+          </p>
+          <button
+            class="bg-transparent border border-orange-500 text-orange-500 px-6 py-2 rounded-md font-semibold text-sm md:text-base self-start hover:bg-orange-500 hover:text-white transition-colors"
+          >
+            ПОДРОБНЕЕ
+          </button>
+        </div>
+
+        <!-- O'rtadagi Rasmiy Foosball Stoli Rasmi -->
+        <div class="w-full md:w-1/3 flex justify-center items-center">
+          <img
+            src="../images/fce5fd41e5a02d0652db792ceec7639eb273c300 (1).png"
+            alt="Foosball Table"
+            class="w-[350px] h-[480px] max-w-[800px] rounded-lg"
+          />
+        </div>
+
+        <!-- O'ng tomondagi ТУРИСТЫ bloki -->
+        <div class="w-full md:w-1/3 flex flex-col justify-center">
+          <div
+            class="bg-white text-black px-4 py-2 rounded-md font-semibold text-xs md:text-sm mb-4 self-start"
+          >
+            TOP "MANHATTAN" TOURISTS
+          </div>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">ТУРИСТЫ</h2>
+          <p class="text-sm md:text-base mb-4">
+            Quam massa pretium et venenatis. Fringilla sagittis, arcu massa, in
+            sem viverra consequat. Tempus sed est interdum eget nisi, nec fames.
+            Eget amet hac varius aliquam. Mattis egestas suspendisse convallis
+            eu arcu et aliquet.
+          </p>
+          <p class="text-sm md:text-base mb-4">
+            Porttitor risus sociis vitae nunc id lacus eget felis. Viverra et
+            purus nibh ut. Sed ac leo sit posuere vulputate sed morbi. Donec
+            gravida at turpis sed pulvinar. A nibh non consectetur morbi in
+            arcu, in pellentesque mauris.
+          </p>
+          <p class="text-sm md:text-base mb-6">
+            Eu sodales netus faucibus interdum interdum platea massa egestas.
+            Facilisis donec gravida pretium diam semper at id eleifend.
+          </p>
+          <button
+            class="bg-transparent border border-orange-500 text-orange-500 px-6 py-2 rounded-md font-semibold text-sm md:text-base self-start hover:bg-orange-500 hover:text-white transition-colors"
+          >
+            ПОДРОБНЕЕ
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 px-6 md:px-12">
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-4 py-2 rounded text-sm font-bold mb-10"
+        >
+          TOP “MANHATTAN” PARTY
+        </div>
+        <h2 class="text-3xl font-bold">ТЕХРАЙДЕР</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="space-y-4">
+          <div
+            class="bg-manhattan-accent p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">LOUDSPEAKERS</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+            <div class="accordion-content mt-2 text-sm hidden">
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Acoustic system BELL Top 600W x 2</li>
+                <li>Acoustic system BELL Mid 600W x 2</li>
+                <li>Acoustic system BELL Sub 1000W x 2</li>
+                <li>Front monitor Yamaha SM12V 300w x 2</li>
+                <li>Backside monitor Dynacord 500W x 2</li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="bg-manhattan-dark p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">AMPLIFIER</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="bg-manhattan-dark p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">FOH</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="bg-manhattan-dark p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">BACKLINE</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="bg-manhattan-dark p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">MICROPHONE SET</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="bg-manhattan-dark p-4 rounded cursor-pointer accordion-item"
+          >
+            <div class="flex justify-between items-center">
+              <span class="font-bold">DJ EQUIPMENT</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">
+            ЗВУКОРЕЖИССЕРЫ КЛУБА МАНХЭТТЕН
+          </h3>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <img
+                src="../images/7d3a5e1263dc36af5110c68120a449c1b0deb7b1.jpg"
+                alt="DJ 1"
+                class="w-full h-[250px] rounded mb-2"
+              />
+              <p class="text-sm font-bold">ИЗОТОВ КОНСТАНТИН</p>
+              <div class="flex justify-center gap-2 mt-2">
+                <button
+                  class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent p-1 rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent p-1 rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 19l9-9M9 9l9-9"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="text-center">
+              <img
+                src="../images/86611d09a30961e912916e68c5f4bec4826f08ff.jpg"
+                alt="DJ 2"
+                class="w-full h-[250px] rounded mb-2"
+              />
+              <p class="text-sm font-bold">ДАВИД ХОЗИЕВ</p>
+              <div class="flex justify-center gap-2 mt-2">
+                <button
+                  class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent p-1 rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="bg-manhattan-bg border border-manhattan-accent text-manhattan-accent p-1 rounded"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 19l9-9M9 9l9-9"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 px-6 md:px-12">
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-4 py-2 rounded text-sm font-bold mb-10"
+        >
+          TOP “MANHATTAN” PLACE
+        </div>
+        <h2 class="text-3xl font-bold">КОНТАКТЫ</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div
+          class="bg-manhattan-dark p-6 rounded border border-manhattan-accent"
+        >
+          <h3 class="text-lg font-bold mb-4">АДРЕС</h3>
+          <p class="text-sm mb-4">
+            Набережная реки Фонтанки, 90 (вход в <br />
+            арке с белыми колоннами)
+          </p>
+          <h3 class="text-lg font-bold mb-4">ТЕЛЕФОН</h3>
+          <p class="text-sm mb-4">+998 97 777 77 77</p>
+          <h3 class="text-lg font-bold mb-4">РЕЖИМ РАБОТЫ</h3>
+          <p class="text-sm mb-4">Ежедневно с 12:00 до 06:00</p>
+          <hr class="my-4 border-gray-600" />
+          <h3 class="text-lg font-bold mb-4">ДИРЕКТОР</h3>
+          <p class="text-sm mb-4">Лидия Эмильевна, +998 97 777 77 77</p>
+          <h3 class="text-lg font-bold mb-4">АРТ-ДИРЕКТОР</h3>
+          <p class="text-sm">Илиния Ионашко, +998 97 777 77 77</p>
+        </div>
+        <!-- Map -->
+        <div>
+          <img
+            src="../images/713f676b05682b1a99978da0dcfdfffc3614da4b.png"
+            alt="Map"
+            class="w-full h-full rounded border border-manhattan-accent"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-6 px-6 md:px-12 border-t border-gray-700">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center text-xs"
+      >
+        <p>Copyright © 2022. Все права защищены.</p>
+        <p>Разработано d-e-n.ru</p>
+      </div>
+    </footer>
+
+    <button
+      id="backToTop"
+      class="fixed bottom-6 right-6 bg-manhattan-accent text-manhattan-bg p-3 rounded-full shadow-lg hover:bg-opacity-90 transition opacity-0 invisible"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 10l7-7m0 0l7 7m-7-7v18"
+        />
+      </svg>
+    </button>
+    <section>
+      <div
+        id="cartModal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden"
+      >
+        <div class="bg-manhattan-bg p-6 rounded-lg w-full max-w-md">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Ваша корзина</h3>
+            <button id="closeCart" class="text-white text-2xl">&times;</button>
+          </div>
+          <div id="cartItems" class="space-y-4 mb-4">
+            <!-- Cart items will be added here dynamically -->
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <span class="font-bold">Итого:</span>
+            <span id="totalPrice" class="font-bold">0 ₽</span>
+          </div>
+          <div class="flex space-x-2">
+            <button
+              id="clearCart"
+              class="flex-1 bg-manhattan-dark text-white py-2 rounded"
+            >
+              Очистить
+            </button>
+            <button
+              id="checkout"
+              class="flex-1 bg-manhattan-accent text-manhattan-bg py-2 rounded"
+            >
+              Оформить заказ
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/style.js"></script>
+  </body>
+</html>

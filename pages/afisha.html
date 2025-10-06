@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manhattan Club and Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              "manhattan-bg": "#1a0d05",
+              "manhattan-accent": "#e67e22",
+              "manhattan-dark": "#2d1a0f",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-manhattan-bg text-white">
+    <header class="py-4 px-6 md:px-12 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img
+          src="../images/2cd43ac7d2389ed9bea6693acd96d30980d6d676.png"
+          alt="Logo"
+          class="w-[150px] h-[40px]"
+        />
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a
+          href="./pages/glavni.html"
+          class="nav-link text-sm uppercase font-medium"
+          >Главная</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+      <button
+        class="hidden md:block bg-transparent border border-manhattan-accent text-manhattan-accent px-6 py-2 rounded font-bold hover:bg-manhattan-accent hover:text-white"
+      >
+        БРОНИРОВАНИЕ
+      </button>
+
+      <!-- Hamburger Menu Button -->
+      <button
+        id="hamburger"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 bg-manhattan-dark rounded"
+      >
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </header>
+
+    <div id="mobileMenu" class="md:hidden bg-manhattan-dark p-6 hidden">
+      <nav class="flex flex-col space-y-4">
+        <a
+          href="../pages/glavni.html"
+          class="nav-link text-sm uppercase font-medium"
+          >Главная</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+    </div>
+
+    <section class="py-8 md:py-12">
+      <!-- Sarlavha -->
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-6 py-2 rounded-md font-semibold text-sm md:text-base mb-4"
+        >
+          TOP "MANHATTAN" PARTY
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold">АФИША</h2>
+      </div>
+
+      <!-- Afishalar Grid (4x3) -->
+      <div
+        class="container mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
+      >
+        <!-- 12 ta afisha -->
+        <template id="afisha-template">
+          <div>
+            <img
+              src=""
+              alt="Event"
+              class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 hover:shadow-lg transition-shadow object-cover"
+            />
+          </div>
+        </template>
+
+        <div>
+          <img
+            src="../images/808570bb98f771656661b1b7d1f6da588d1de402.jpg"
+            alt="Event 1"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/f8cd3025e84aa3bd7330702d035f3591b9adfe40.jpg"
+            alt="Event 2"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/f872ddf89ba7e05313a6169f020424f6a763f768.jpg"
+            alt="Event 3"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/911298623892a6c2bf69eba6cc6dad0cc0ce0da5.jpg"
+            alt="Event 4"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+
+        <div>
+          <img
+            src="../images/911298623892a6c2bf69eba6cc6dad0cc0ce0da5.jpg"
+            alt="Event 5"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/808570bb98f771656661b1b7d1f6da588d1de402.jpg"
+            alt="Event 6"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/f8cd3025e84aa3bd7330702d035f3591b9adfe40.jpg"
+            alt="Event 7"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/f872ddf89ba7e05313a6169f020424f6a763f768.jpg"
+            alt="Event 8"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+
+        <div>
+          <img
+            src="../images/f872ddf89ba7e05313a6169f020424f6a763f768.jpg"
+            alt="Event 9"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/911298623892a6c2bf69eba6cc6dad0cc0ce0da5.jpg"
+            alt="Event 10"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/808570bb98f771656661b1b7d1f6da588d1de402.jpg"
+            alt="Event 11"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+        <div>
+          <img
+            src="../images/f8cd3025e84aa3bd7330702d035f3591b9adfe40.jpg"
+            alt="Event 12"
+            class="w-full h-[450px] bg-[#2d1a10] rounded-lg overflow-hidden border border-orange-500 object-cover"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-8 md:py-12">
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-6 py-2 rounded-md font-semibold text-sm md:text-base mb-4"
+        >
+          TOP "MANHATTAN" PLACE
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold">КОНТАКТЫ</h2>
+      </div>
+
+      <div class="container mx-auto px-4 flex flex-col md:flex-row gap-6">
+        <div
+          class="w-full md:w-1/3 bg-[#2d1a10] p-6 rounded-lg border border-orange-500"
+        >
+          <h3 class="text-xl font-bold mb-4">АДРЕС</h3>
+          <p class="text-sm md:text-base mb-6">
+            Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)
+          </p>
+
+          <h3 class="text-xl font-bold mb-4">ТЕЛЕФОН</h3>
+          <p class="text-sm md:text-base mb-6">+7 (812) 713-1945</p>
+
+          <h3 class="text-xl font-bold mb-4">РЕЖИМ РАБОТЫ</h3>
+          <p class="text-sm md:text-base mb-6">Ежедневно с 12:00 до 06:00</p>
+
+          <hr class="my-6 border-gray-600" />
+
+          <h3 class="text-xl font-bold mb-4">ДИРЕКТОР</h3>
+          <p class="text-sm md:text-base mb-6">
+            Лидия Эмильевна, +7(921) 963-55-50
+          </p>
+
+          <h3 class="text-xl font-bold mb-4">АРТ-ДИРЕКТОР</h3>
+          <p class="text-sm md:text-base">Илиния Ионашко, +7(981) 989-43-30</p>
+        </div>
+
+        <div class="w-full md:w-2/3">
+          <img
+            src="../images/713f676b05682b1a99978da0dcfdfffc3614da4b.png"
+            alt="Manhattan Club Map"
+            class="w-full h-auto rounded-lg border border-orange-500"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4 text-white text-center text-xs">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>Copyright © 2022. Все права защищены.</p>
+        <p>Разработано d-e-n.ru</p>
+      </div>
+    </footer>
+    <script src="../js/style.js"></script>
+  </body>
+</html>

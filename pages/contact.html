@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manhattan Club and Bar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              "manhattan-bg": "#1a0d05",
+              "manhattan-accent": "#e67e22",
+              "manhattan-dark": "#2d1a0f",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-manhattan-bg text-white">
+    <header class="py-4 px-6 md:px-12 flex justify-between items-center">
+      <div class="flex items-center gap-2">
+        <img
+          src="../images/2cd43ac7d2389ed9bea6693acd96d30980d6d676.png"
+          alt="Logo"
+          class="w-[150px] h-[40px]"
+        />
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a
+          href="./pages/glavni.html"
+          class="nav-link text-sm uppercase font-medium"
+          >Главная</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+      <button
+        class="hidden md:block bg-transparent border border-manhattan-accent text-manhattan-accent px-6 py-2 rounded font-bold hover:bg-manhattan-accent hover:text-white"
+      >
+        БРОНИРОВАНИЕ
+      </button>
+
+      <!-- Hamburger Menu Button -->
+      <button
+        id="hamburger"
+        class="md:hidden flex flex-col justify-center items-center w-10 h-10 bg-manhattan-dark rounded"
+      >
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white mb-1"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+    </header>
+
+    <div id="mobileMenu" class="md:hidden bg-manhattan-dark p-6 hidden">
+      <nav class="flex flex-col space-y-4">
+        <a
+          href="../pages/glavni.html"
+          class="nav-link text-sm uppercase font-medium"
+          >Главная</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Меню</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Афиша</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium"
+          >Сотрудничество</a
+        >
+        <a href="#" class="nav-link text-sm uppercase font-medium">Галерея</a>
+        <a href="#" class="nav-link text-sm uppercase font-medium">Новости</a>
+      </nav>
+    </div>
+
+    <section class="py-8 md:py-12 bg-[#1a0d05] text-white">
+      <!-- Sarlavha -->
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-6 py-2 rounded-md font-semibold text-sm md:text-base mb-4"
+        >
+          TOP "MANHATTAN" EVENTS
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold">КОРПОРАТИВЫ</h2>
+      </div>
+
+      <!-- Ikki ta Taklif (Furshet va Banket) -->
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row gap-6 justify-center"
+      >
+        <!-- Furshet Menyu -->
+        <div
+          class="w-full md:w-1/2 max-w-md p-6 bg-[#2d1a10] rounded-lg border border-orange-500 flex flex-col items-center text-center"
+        >
+          <!-- Ikonka -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-12 w-12 text-orange-500 mb-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 6h18M3 12h18M3 18h18"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 6h6"
+            />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Фуршетное меню от 1000 руб.</h3>
+          <p class="text-sm md:text-base">на человека (до 150 человек).</p>
+        </div>
+
+        <!-- Banket Menyu -->
+        <div
+          class="w-full md:w-1/2 max-w-md p-6 bg-[#2d1a10] rounded-lg border border-orange-500 flex flex-col items-center text-center"
+        >
+          <!-- Ikonka -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-12 w-12 text-orange-500 mb-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 6v6m0 0v6m0-6h6m-6 6h6"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+          <h3 class="text-xl font-bold mb-2">Банкетное меню от 1500 руб.</h3>
+          <p class="text-sm md:text-base">на человека (до 100 человек).</p>
+        </div>
+      </div>
+
+      <!-- ПОЧЕМУ МЫ? Bloki -->
+      <div class="mt-12 text-center">
+        <h3 class="text-2xl md:text-3xl font-bold mb-6">ПОЧЕМУ МЫ?</h3>
+        <ul class="max-w-2xl mx-auto list-disc space-y-2 text-left px-6">
+          <li class="text-sm md:text-base">
+            Отдельный зал на 30 человек с профессиональной системой караоке
+          </li>
+          <li class="text-sm md:text-base">
+            Удобная парковка и близость к трем станциям метро в центре города
+          </li>
+          <li class="text-sm md:text-base">Большие экраны</li>
+          <li class="text-sm md:text-base">
+            Танцпол с современной звуковой и световой аппаратурой
+          </li>
+          <li class="text-sm md:text-base">Сцена с проекционным экраном.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- КОНТАКТЫ Bloki -->
+    <section class="py-8 md:py-12 bg-[#1a0d05] text-white">
+      <!-- Sarlavha -->
+      <div class="text-center mb-8">
+        <div
+          class="inline-block bg-white text-black px-6 py-2 rounded-md font-semibold text-sm md:text-base mb-4"
+        >
+          TOP "MANHATTAN" PLACE
+        </div>
+        <h2 class="text-3xl md:text-4xl font-bold">КОНТАКТЫ</h2>
+      </div>
+
+      <!-- Kontakt Ma'lumotlari va Xarita -->
+      <div class="container mx-auto px-4 flex flex-col md:flex-row gap-6">
+        <!-- Chap tomondagi Kontakt Ma'lumotlari -->
+        <div
+          class="w-full md:w-1/3 bg-[#2d1a10] p-6 rounded-lg border border-orange-500"
+        >
+          <h3 class="text-xl font-bold mb-4">АДРЕС</h3>
+          <p class="text-sm md:text-base mb-6">
+            Набережная реки Фонтанки, 90 (вход в арке с белыми колоннами)
+          </p>
+
+          <h3 class="text-xl font-bold mb-4">ТЕЛЕФОН</h3>
+          <p class="text-sm md:text-base mb-6">+7 (812) 713-1945</p>
+
+          <h3 class="text-xl font-bold mb-4">РЕЖИМ РАБОТЫ</h3>
+          <p class="text-sm md:text-base mb-6">Ежедневно с 12:00 до 06:00</p>
+
+          <hr class="my-6 border-gray-600" />
+
+          <h3 class="text-xl font-bold mb-4">ДИРЕКТОР</h3>
+          <p class="text-sm md:text-base mb-6">
+            Лидия Эмильевна, +7(921) 963-55-50
+          </p>
+
+          <h3 class="text-xl font-bold mb-4">АРТ-ДИРЕКТОР</h3>
+          <p class="text-sm md:text-base">Илиния Ионашко, +7(981) 989-43-30</p>
+        </div>
+
+        <!-- O'ng tomondagi Xarita -->
+        <div class="w-full md:w-2/3">
+          <img
+            src="../images/713f676b05682b1a99978da0dcfdfffc3614da4b.png"
+            alt="Manhattan Club Map"
+            class="w-full h-auto rounded-lg border border-orange-500"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-[#1a0d05] text-white text-center text-xs">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center"
+      >
+        <p>Copyright © 2022. Все права защищены.</p>
+        <p>Разработано d-e-n.ru</p>
+      </div>
+    </footer>
+    <script src="../js/style.js"></script>
+  </body>
+</html>
